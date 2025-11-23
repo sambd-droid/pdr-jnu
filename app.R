@@ -15,7 +15,7 @@ library(shinyjs)
 # Initialize rgee (assumes you have already run ee_Initialize() interactively at least once)
 # If you need to run initialization programmatically: ee_Initialize()
 ee_Initialize(service_account = "gee-service@pdr-jnu.iam.gserviceaccount.com",
-              path = "service_account.json")
+              credentials= "service_account.json")
 
 ui <- fluidPage(
   useShinyjs(),
@@ -267,3 +267,4 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
